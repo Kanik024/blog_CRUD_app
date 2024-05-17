@@ -1,6 +1,5 @@
-from pymongo import MongoClient
+class Database:
+    client: motor.motor_asyncio.AsyncIOMotorClient = None
+    database: motor.motor_asyncio.AsyncIOMotorDatabase = None
 
-def connect_to_mongo():
-    client = MongoClient("mongodb://localhost:27017/")
-    db = client["blogging_platform"]
-    return db
+db = Database()
